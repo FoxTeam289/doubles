@@ -1,0 +1,73 @@
+---
+import { data } from "./data";
+import "swiper/css";
+import "swiper/css/effect-fade";
+---
+
+<div class="photos scale" data-photo>
+  <div class="photos__wrap">
+    <img
+      src="https://static.tildacdn.com/tild6665-3338-4433-b433-333962353431/MAXR3362.jpg"
+      alt=""
+    />
+  </div>
+</div>
+<style lang="scss">
+  @import "../styles/settings";
+
+  .photos {
+    position: relative;
+
+    @include easy(opacity);
+
+    @include des {
+      width: d(590);
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    @include mob {
+      width: 100%;
+      margin-bottom: m(20);
+    }
+
+    &.hidden {
+      opacity: 0;
+    }
+
+    &__wrap {
+      position: relative;
+      overflow: hidden;
+
+      & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+        transition: transform 0.5s ease 0.3s;
+
+        .scale & {
+          @include mob {
+            transform: scale(1.8);
+          }
+        }
+      }
+
+      @include des {
+        padding-bottom: 100%;
+        border-radius: d(30);
+        border: d(1) solid #f5f5f5;
+      }
+
+      @include mob {
+        padding-bottom: 60%;
+        border-radius: m(18);
+        border: m(1) solid #f5f5f5;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,226 @@
+---
+import { data } from "./data";
+
+const { title, items } = data;
+---
+
+<div class="select">
+  <h1 class="select__title">{title}</h1>
+  <div
+    class="select__item"
+    data-select={`${items[0].text1}| ${items[0].text2}`}
+  >
+    <div class="select__item-head" data-select-head>
+      <span>{items[0].text1}<br /> {items[0].text2}</span>
+      <svg
+        class="select__item-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="8"
+        height="5"
+        viewBox="0 0 8 5"
+        fill="none"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M0.27621 0.800708C0.448715 0.585077 0.763361 0.550116 0.978992 0.722621L3.99998 3.13941L7.02096 0.722621C7.2366 0.550116 7.55124 0.585077 7.72375 0.800708C7.89625 1.01634 7.86129 1.33099 7.64566 1.50349L4.31233 4.17016C4.12972 4.31624 3.87024 4.31624 3.68763 4.17016L0.354297 1.50349C0.138666 1.33099 0.103705 1.01634 0.27621 0.800708Z"
+          fill="#EB503E"></path>
+      </svg>
+    </div>
+    <div class="select__item-body" data-select-body>
+      {
+        items.map(({ text1, text2, photo }) => (
+          <div
+            class="select__item-el"
+            data-select-el={`${text1}<br> ${text2}`}
+            data-photo={photo}
+          >
+            {text1}
+            <br />
+            {text2}
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>
+<style lang="scss">
+  @import "../styles/settings";
+
+  .select {
+    @include des {
+      width: d(430);
+      margin-bottom: d(30);
+    }
+
+    @include mob {
+      width: 100%;
+      margin-bottom: m(20);
+    }
+
+    &__title {
+      color: #6b6663;
+      font-weight: 500;
+      line-height: 130%;
+
+      @include des {
+        font-size: d(15);
+        letter-spacing: d(-0.45);
+        margin-bottom: d(12);
+      }
+
+      @include mob {
+        font-size: m(12);
+        letter-spacing: m(-0.36);
+        margin-bottom: m(12);
+      }
+    }
+
+    &__item {
+      position: relative;
+      width: 100%;
+      background-color: #fff;
+
+      @include des {
+        height: d(80);
+      }
+
+      @include mob {
+        height: m(58);
+      }
+
+      &-head {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-color: #e7e4e4;
+        border-style: solid;
+        border-width: inherit;
+        background-color: inherit;
+
+        color: #6b6663;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+
+        transition-property: color, border-color;
+        transition-duration: 0.3s;
+        transition-timing-function: ease;
+        transition-delay: 0s;
+
+        &:is(:hover) {
+          color: #241f1f;
+          border-color: #eb503e;
+          cursor: pointer;
+        }
+
+        .show & {
+          color: #241f1f;
+          border-color: #eb503e;
+        }
+
+        @include des {
+          font-size: d(14);
+          padding: d(22);
+          border-width: d(1);
+          border-radius: d(18);
+        }
+
+        @include mob {
+          font-size: m(12);
+          padding: m(12);
+          border-width: m(1);
+          border-radius: m(12);
+        }
+      }
+
+      &-icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: auto;
+
+        @include easy(transform);
+
+        .show & {
+          transform: translateY(-50%) scale(-1);
+        }
+
+        @include des {
+          right: d(22);
+          width: d(12);
+        }
+
+        @include mob {
+          right: m(12);
+          width: m(10);
+        }
+      }
+
+      &-body {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        transform: translateY(102%);
+        z-index: 99;
+        border-color: #e7e4e4;
+        border-style: solid;
+        border-width: inherit;
+        background-color: inherit;
+        opacity: 0;
+        visibility: hidden;
+
+        @include easy(all);
+
+        &.show {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        @include des {
+          padding: d(11) d(22);
+          box-shadow: 0 0 d(20) 0 #fff;
+          border-width: d(1);
+          border-radius: d(18);
+        }
+
+        @include mob {
+          padding: m(6) m(12);
+          box-shadow: 0 0 m(20) 0 #fff;
+          border-width: m(1);
+          border-radius: m(12);
+        }
+      }
+
+      &-el {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        color: #6b6663;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+
+        @include easy(color);
+
+        &:is(:hover) {
+          color: #241f1f;
+          cursor: pointer;
+        }
+
+        @include des {
+          font-size: d(14);
+          padding: d(11) 0;
+        }
+
+        @include mob {
+          font-size: m(12);
+          padding: m(6) 0;
+        }
+      }
+    }
+  }
+</style>

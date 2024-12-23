@@ -1,0 +1,14 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Bracelets from "../components/Bracelets";
+---
+
+<Layout title="Индивидуальный Браслет">
+  <Bracelets />
+</Layout>
+
+<script>
+  import { initBraslet } from "../scripts/braslet/initBraslet";
+
+  initBraslet();
+</script>
