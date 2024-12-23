@@ -1,3 +1,5 @@
+/** @format */
+
 export const data = {
   bracelets: [
     {
@@ -11,17 +13,15 @@ export const data = {
             {
               id: "bracelet-1-type-1",
               value: "Узкий (4 мм)",
-              price: "4000",
+              price: "3190",
               active: true,
-              photo:
-                "https://static.tildacdn.com/tild3366-3235-4638-b434-316366393832/tupe-1.jpg",
+              photo: "https://static.tildacdn.com/tild3366-3235-4638-b434-316366393832/tupe-1.jpg",
             },
             {
               id: "bracelet-1-type-2",
               value: "Широкий (6 мм)",
-              price: "5000",
-              photo:
-                "https://static.tildacdn.com/tild3530-3730-4432-b231-393131656534/type-2.jpg",
+              price: "3190",
+              photo: "https://static.tildacdn.com/tild3530-3730-4432-b231-393131656534/type-2.jpg",
             },
           ],
         },
@@ -32,17 +32,15 @@ export const data = {
             {
               id: "bracelet-1-wrist-1",
               value: "10-14 см",
-              price: "2000",
+              price: "0",
               active: true,
-              photo:
-                "https://static.tildacdn.com/tild3265-6333-4863-b162-353033363033/location.png",
+              photo: "https://static.tildacdn.com/tild3265-6333-4863-b162-353033363033/location.png",
             },
             {
               id: "bracelet-1-wrist-2",
               value: "15-18 см",
-              price: "3000",
-              photo:
-                "https://static.tildacdn.com/tild3265-6333-4863-b162-353033363033/location.png",
+              price: "0",
+              photo: "https://static.tildacdn.com/tild3265-6333-4863-b162-353033363033/location.png",
             },
           ],
         },
@@ -59,17 +57,15 @@ export const data = {
             {
               id: "bracelet-2-type-1",
               value: "Узкий (4 мм)",
-              price: "4000",
+              price: "0",
               active: true,
-              photo:
-                "https://static.tildacdn.com/tild3366-3235-4638-b434-316366393832/tupe-1.jpg",
+              photo: "https://static.tildacdn.com/tild3366-3235-4638-b434-316366393832/tupe-1.jpg",
             },
             {
               id: "bracelet-2-type-2",
               value: "Широкий (6 мм)",
-              price: "5000",
-              photo:
-                "https://static.tildacdn.com/tild3530-3730-4432-b231-393131656534/type-2.jpg",
+              price: "0",
+              photo: "https://static.tildacdn.com/tild3530-3730-4432-b231-393131656534/type-2.jpg",
             },
           ],
         },
@@ -80,17 +76,15 @@ export const data = {
             {
               id: "bracelet-2-wrist-1",
               value: "10-14 см",
-              price: "2000",
+              price: "0",
               active: true,
-              photo:
-                "https://static.tildacdn.com/tild3265-6333-4863-b162-353033363033/location.png",
+              photo: "https://static.tildacdn.com/tild3265-6333-4863-b162-353033363033/location.png",
             },
             {
               id: "bracelet-2-wrist-2",
               value: "15-18 см",
-              price: "3000",
-              photo:
-                "https://static.tildacdn.com/tild3265-6333-4863-b162-353033363033/location.png",
+              price: "0",
+              photo: "https://static.tildacdn.com/tild3265-6333-4863-b162-353033363033/location.png",
             },
           ],
         },

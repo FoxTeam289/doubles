@@ -5,7 +5,7 @@ import { data } from "./data";
 <>
   {
     data.bracelets.map(({ title, text, items }) => (
-      <div class="type">
+      <div class="type" data-el='Браслет' data-el-name={title}>
         {title && <h2 class="type__title">{title}</h2>}
         {text && (
           <p class="type__text" data-text-bracelet>

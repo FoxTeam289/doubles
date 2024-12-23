@@ -25,11 +25,10 @@ const totalSum = (input, priceValue) => {
     0,
   );
 
-  /* totalPrice.innerHTML = sum; */
-  totalPrice.innerHTML = 3180;
+  totalPrice.innerHTML = sum;
 
   if (priceValue) {
-    priceValue.innerHTML = 3180;
+    priceValue.innerHTML = sum;
     priceValue.setAttribute("data-product-price-def", sum);
     priceValue.setAttribute("data-product-price-def-str", sum);
   }
